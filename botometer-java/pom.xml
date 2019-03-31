@@ -16,7 +16,7 @@
 	<description>Java client for the Botometer API</description>
 	
 	<properties>
-		<jackson.version>2.9.7</jackson.version>
+		<jackson.version>2.9.8</jackson.version>
 		<okhttp.version>3.14.0</okhttp.version>
 		<slf4j.version>1.7.26</slf4j.version>
 	</properties>
