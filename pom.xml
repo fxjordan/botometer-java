@@ -36,7 +36,7 @@
 
 	<modules>
 		<module>botometer-api</module>
-		<module>botometer-java</module>
+		<module>botometer-client</module>
 	</modules>
 
 	<build>

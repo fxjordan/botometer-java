@@ -31,7 +31,7 @@ More details will follow soon.
 ```xml
 <dependency>
     <groupId>de.fjobilabs.botometer</groupId>
-    <artifactId>botometer-java</artifactId>
+    <artifactId>botometer-client</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 </dependency>
 ```
