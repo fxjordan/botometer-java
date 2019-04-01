@@ -7,6 +7,35 @@ A Java client library form the Botometer API. For more Information see [the webs
 
 More details will follow soon.
 
+## Setup
+
+1. Add FJOBI Labs repository to your `pom.xml`:
+
+```xml
+<repositories>
+    <repository>
+        <id>fjobilabs-snapshots</id>
+        <name>FJOBILabs Snapshots</name>
+        <url>https://repo.fjobilabs.de/repository/maven-snapshots/</url>
+    </repository>
+    <repository>
+        <id>fjobilabs-releases</id>
+        <name>FJOBILabs Releases</name>
+        <url>https://repo.fjobilabs.de/repository/maven-releases/</url>
+    </repository>
+</repositories>
+```
+
+2. Add dependecy:
+
+```xml
+<dependency>
+    <groupId>de.fjobilabs.botometer</groupId>
+    <artifactId>botometer-java</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+</dependency>
+```
+
 ## License
 
     Copyright 2019 FJOBI Labs Softwareentwicklung - Felix Jordan
