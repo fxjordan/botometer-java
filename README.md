@@ -1,4 +1,4 @@
-# Botometer Java [![Build Status](https://build.fjobilabs.de/job/botometer-java/job/master/badge/icon)](https://build.fjobilabs.de/job/botometer-java/job/master/)
+# Botometer Java [![Build Status](https://build.fjobilabs.de/job/botometer-java/job/master/badge/icon)](https://build.fjobilabs.de/blue/organizations/jenkins/botometer-java)
 
 A Java client library form the Botometer API. For more Information see [the website][botometer-website].
 
