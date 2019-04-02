@@ -19,8 +19,8 @@ import de.fjobilabs.botometer.api.BotometerClient;
 import de.fjobilabs.botometer.api.BotometerClientFactory;
 import de.fjobilabs.botometer.support.ServiceLoaderBotometerFactory;
 import de.fjobilabs.botometer.support.ServiceLoaderTwitterClientFactory;
-import de.fjobilabs.botometer.support.TwitterClient;
-import de.fjobilabs.botometer.support.TwitterClientFactory;
+import de.fjobilabs.botometer.twitterclient.TwitterClient;
+import de.fjobilabs.botometer.twitterclient.TwitterClientFactory;
 
 /**
  * @since 0.1.0

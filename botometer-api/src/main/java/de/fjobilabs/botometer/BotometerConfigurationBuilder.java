@@ -16,7 +16,7 @@
 package de.fjobilabs.botometer;
 
 import de.fjobilabs.botometer.api.BotometerClientFactory;
-import de.fjobilabs.botometer.support.TwitterClientFactory;
+import de.fjobilabs.botometer.twitterclient.TwitterClientFactory;
 
 /**
  * @since 0.1.0

@@ -19,8 +19,8 @@ import java.io.IOException;
 import java.util.List;
 
 import de.fjobilabs.botometer.api.BotometerClient;
-import de.fjobilabs.botometer.support.TwitterClient;
-import de.fjobilabs.botometer.support.TwitterClientException;
+import de.fjobilabs.botometer.twitterclient.TwitterClient;
+import de.fjobilabs.botometer.twitterclient.TwitterClientException;
 import de.fjobilabs.twitter.Tweet;
 import de.fjobilabs.twitter.User;
 

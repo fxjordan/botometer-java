@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.fjobilabs.botometer.support;
+package de.fjobilabs.botometer.twitterclient;
 
 /**
  * @since 0.1.0

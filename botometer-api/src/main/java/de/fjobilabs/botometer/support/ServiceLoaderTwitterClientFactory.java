@@ -17,6 +17,9 @@ package de.fjobilabs.botometer.support;
 
 import java.util.ServiceLoader;
 
+import de.fjobilabs.botometer.twitterclient.TwitterClient;
+import de.fjobilabs.botometer.twitterclient.TwitterClientFactory;
+
 /**
  * @since 0.1.0
  * @author Felix Jordan
