@@ -13,22 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.fjobilabs.botometer;
+package de.fjobilabs.botometer.api;
 
-import java.util.List;
+import java.io.IOException;
 
-import de.fjobilabs.twitter.Tweet;
-import de.fjobilabs.twitter.User;
+import de.fjobilabs.botometer.BotometerException;
+import de.fjobilabs.botometer.ClassificationResult;
 
 /**
  * @since 0.1.0
  * @author Felix Jordan
  */
-public interface AccountData {
+public interface BotometerRawOperations {
     
-    User getUser();
+    ClassificationResult checkAccount(String accountDataJson) throws BotometerException, IOException;
     
-    List<? extends Tweet> getTimeline();
+    ClassificationResult checkAccount(byte[] accountDataJson) throws BotometerException, IOException;
     
-    List<? extends Tweet> getMentions();
+    ClassificationResult checkAccount(String userJson, String timelineJson, String mentionsJson) throws BotometerException, IOException;
+    
+    ClassificationResult checkAccount(byte[] userJson, byte[] timelineJson, byte[] mentionsJson) throws BotometerException, IOException;
 }

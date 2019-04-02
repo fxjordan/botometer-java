@@ -13,15 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.fjobilabs.twitter;
+package de.fjobilabs.botometer;
+
+import de.fjobilabs.botometer.AccountAnalysisResult;
+import de.fjobilabs.botometer.api.BotometerClient;
 
 /**
  * @since 0.1.0
  * @author Felix Jordan
  */
-public interface BoundingBox {
+public interface Botometer extends BotometerClient {
     
-    float[][][] getCoordinates();
+    AccountAnalysisResult analyzeAccount(long userId);
     
-    String getType();
+    AccountAnalysisResult analyzeAccount(String screenName);
 }

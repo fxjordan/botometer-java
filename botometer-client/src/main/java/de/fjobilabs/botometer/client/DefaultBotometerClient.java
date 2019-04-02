@@ -4,9 +4,9 @@
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
+ * 
  *     http://www.apache.org/licenses/LICENSE-2.0
- *
+ * 
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -24,10 +24,10 @@ import org.slf4j.LoggerFactory;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 
-import de.fjobilabs.botometer.ApiError;
-import de.fjobilabs.botometer.BotometerApiException;
 import de.fjobilabs.botometer.BotometerException;
 import de.fjobilabs.botometer.ClassificationResult;
+import de.fjobilabs.botometer.api.ApiError;
+import de.fjobilabs.botometer.api.BotometerApiException;
 import de.fjobilabs.botometer.dto.ClassificationResultDTO;
 
 import okhttp3.MediaType;
@@ -41,17 +41,17 @@ import okhttp3.ResponseBody;
  * @since 0.1.0
  * @author Felix Jordan
  */
-public class BotometerClient extends AbstractBotometerClient {
+public class DefaultBotometerClient extends AbstractBotometerClient {
     
     private static final String BOTOMETER_CHECK_ACCOUNT_URL = "https://osome-botometer.p.rapidapi.com/2/check_account";
     private static final MediaType JSON_MEDIA_TYPE = MediaType.get("application/json; charset=utf-8");
     
-    private static final Logger logger = LoggerFactory.getLogger(BotometerClient.class);
+    private static final Logger logger = LoggerFactory.getLogger(DefaultBotometerClient.class);
     
     private String apiKey;
     private OkHttpClient httpClient;
     
-    public BotometerClient(String apiKey) {
+    public DefaultBotometerClient(String apiKey) {
         Objects.requireNonNull(apiKey, "apikey must not be null");
         this.apiKey = apiKey;
         this.httpClient = new OkHttpClient();

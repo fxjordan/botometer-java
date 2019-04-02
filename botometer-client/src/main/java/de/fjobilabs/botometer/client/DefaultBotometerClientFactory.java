@@ -13,15 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.fjobilabs.twitter;
+package de.fjobilabs.botometer.client;
+
+import de.fjobilabs.botometer.api.BotometerClient;
+import de.fjobilabs.botometer.api.BotometerClientFactory;
 
 /**
  * @since 0.1.0
  * @author Felix Jordan
  */
-public interface BoundingBox {
+public class DefaultBotometerClientFactory implements BotometerClientFactory {
     
-    float[][][] getCoordinates();
-    
-    String getType();
+    @Override
+    public BotometerClient createBotometerClient(String apiKey) {
+        return new DefaultBotometerClient(apiKey);
+    }
 }

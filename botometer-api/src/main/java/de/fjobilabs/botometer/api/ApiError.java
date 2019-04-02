@@ -13,15 +13,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.fjobilabs.twitter;
+package de.fjobilabs.botometer.api;
 
 /**
  * @since 0.1.0
  * @author Felix Jordan
  */
-public interface BoundingBox {
+public class ApiError {
     
-    float[][][] getCoordinates();
+    private String error;
+    private String message;
     
-    String getType();
+    /*
+     * Constructor for deserialization.
+     */
+    ApiError() {
+    }
+    
+    public ApiError(String error, String message) {
+        this.error = error;
+        this.message = message;
+    }
+    
+    public String getError() {
+        return error;
+    }
+    
+    public String getMessage() {
+        return message;
+    }
 }

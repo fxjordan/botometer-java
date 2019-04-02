@@ -13,15 +13,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.fjobilabs.twitter;
+package de.fjobilabs.botometer.api;
+
+import java.io.IOException;
+import java.util.List;
+
+import de.fjobilabs.botometer.AccountData;
+import de.fjobilabs.botometer.BotometerException;
+import de.fjobilabs.botometer.ClassificationResult;
+import de.fjobilabs.twitter.Tweet;
+import de.fjobilabs.twitter.User;
 
 /**
  * @since 0.1.0
  * @author Felix Jordan
  */
-public interface BoundingBox {
+public interface BotometerOperations {
     
-    float[][][] getCoordinates();
+    ClassificationResult checkAccount(AccountData accountData) throws BotometerException, IOException;
     
-    String getType();
+    ClassificationResult checkAccount(User user, List<Tweet> timeline, List<Tweet> mentions)
+        throws BotometerException, IOException;
 }

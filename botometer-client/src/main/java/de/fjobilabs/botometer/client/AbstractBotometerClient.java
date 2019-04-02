@@ -4,9 +4,9 @@
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
+ * 
  *     http://www.apache.org/licenses/LICENSE-2.0
- *
+ * 
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -29,9 +29,10 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import de.fjobilabs.botometer.AccountData;
 import de.fjobilabs.botometer.BotometerException;
-import de.fjobilabs.botometer.BotometerOperations;
-import de.fjobilabs.botometer.BotometerRawOperations;
 import de.fjobilabs.botometer.ClassificationResult;
+import de.fjobilabs.botometer.api.BotometerClient;
+import de.fjobilabs.botometer.api.BotometerOperations;
+import de.fjobilabs.botometer.api.BotometerRawOperations;
 import de.fjobilabs.botometer.dto.AccountDataDTO;
 import de.fjobilabs.twitter.Tweet;
 import de.fjobilabs.twitter.User;
@@ -42,12 +43,22 @@ import de.fjobilabs.twitter.dto.UserDTO;
  * @since 0.1.0
  * @author Felix Jordan
  */
-public abstract class AbstractBotometerClient implements BotometerRawOperations, BotometerOperations {
+public abstract class AbstractBotometerClient implements BotometerClient, BotometerRawOperations, BotometerOperations {
     
     protected ObjectMapper objectMapper;
     
     public AbstractBotometerClient() {
         this.objectMapper = ObjectMapperFactory.getInstance().create();
+    }
+    
+    @Override
+    public BotometerOperations getBotometerOperations() {
+        return this;
+    }
+    
+    @Override
+    public BotometerRawOperations getRawOperations() {
+        return this;
     }
     
     @Override

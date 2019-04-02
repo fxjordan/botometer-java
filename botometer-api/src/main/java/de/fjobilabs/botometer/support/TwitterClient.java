@@ -13,15 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.fjobilabs.twitter;
+package de.fjobilabs.botometer.support;
+
+import java.util.List;
+
+import de.fjobilabs.twitter.Tweet;
+import de.fjobilabs.twitter.User;
 
 /**
  * @since 0.1.0
  * @author Felix Jordan
  */
-public interface BoundingBox {
+public interface TwitterClient {
     
-    float[][][] getCoordinates();
+    User getUser(long userId) throws TwitterClientException;
     
-    String getType();
+    User getUser(String screenName) throws TwitterClientException;
+    
+    List<Tweet> getUserTimeline(long userId, int count) throws TwitterClientException;
+    
+    List<Tweet> getUserTimeline(String screenName, int count) throws TwitterClientException;
+    
+    List<Tweet> search(String query, int count) throws TwitterClientException;
 }

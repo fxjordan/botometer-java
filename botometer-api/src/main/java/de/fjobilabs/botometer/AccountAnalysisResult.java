@@ -13,15 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.fjobilabs.twitter;
+package de.fjobilabs.botometer;
 
 /**
  * @since 0.1.0
  * @author Felix Jordan
  */
-public interface BoundingBox {
+public interface AccountAnalysisResult extends AccountData, ClassificationResult {
     
-    float[][][] getCoordinates();
-    
-    String getType();
 }
