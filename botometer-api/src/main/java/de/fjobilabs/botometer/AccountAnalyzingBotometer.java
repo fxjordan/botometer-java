@@ -119,6 +119,11 @@ class AccountAnalyzingBotometer extends BaseBotometer implements Botometer {
         }
         
         @Override
+        public DisplayScores getDisplayScores() {
+            return this.classificationResult.getDisplayScores();
+        }
+        
+        @Override
         public User getUser() {
             return this.classificationResult.getUser();
         }

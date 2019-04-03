@@ -21,6 +21,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import de.fjobilabs.botometer.Categories;
 import de.fjobilabs.botometer.ClassificationResult;
 import de.fjobilabs.botometer.CompleteAutomationProbability;
+import de.fjobilabs.botometer.DisplayScores;
 import de.fjobilabs.botometer.Scores;
 import de.fjobilabs.twitter.User;
 import de.fjobilabs.twitter.dto.UserDTO;
@@ -36,10 +37,7 @@ public class ClassificationResultDTO implements ClassificationResult {
     private UserDTO user;
     private ScoresDTO scores;
     private CompleteAutomationProbabilityDTO completeAutomationProbability;
-    
-    /*
-     * TODO Add support for display_scores.
-     */
+    private DisplayScoresDTO displayScores;
     
     @Override
     public Categories getCategories() {
@@ -60,6 +58,11 @@ public class ClassificationResultDTO implements ClassificationResult {
     @Override
     public CompleteAutomationProbability getCompleteAutomationProbability() {
         return completeAutomationProbability;
+    }
+    
+    @Override
+    public DisplayScores getDisplayScores() {
+        return displayScores;
     }
     
     @Override

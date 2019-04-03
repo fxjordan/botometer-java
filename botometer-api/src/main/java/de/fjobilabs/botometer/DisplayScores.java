@@ -15,21 +15,25 @@
  */
 package de.fjobilabs.botometer;
 
-import de.fjobilabs.twitter.User;
-
 /**
  * @since 0.1.0
  * @author Felix Jordan
  */
-public interface ClassificationResult {
+public interface DisplayScores {
     
-    Categories getCategories();
+    float getContent();
     
-    User getUser();
+    float getEnglish();
     
-    Scores getScores();
+    float getFriend();
     
-    CompleteAutomationProbability getCompleteAutomationProbability();
+    float getNetwork();
     
-    DisplayScores getDisplayScores();
+    float getSentiment();
+    
+    float getTemporal();
+    
+    float getUniversal();
+    
+    float getUser();
 }
