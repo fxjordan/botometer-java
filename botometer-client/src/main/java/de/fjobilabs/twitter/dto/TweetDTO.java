@@ -28,6 +28,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty.Access;
 
 import de.fjobilabs.twitter.Coordinates;
 import de.fjobilabs.twitter.Entities;
@@ -248,11 +249,13 @@ public class TweetDTO implements Tweet {
         return isQuoteStatus;
     }
     
+    @JsonProperty(access = Access.WRITE_ONLY)
     @Override
     public Tweet getQuotedStatus() {
         return quotedStatus;
     }
     
+    @JsonProperty(access = Access.WRITE_ONLY)
     @Override
     public Tweet getRetweetedStatus() {
         return retweetedStatus;
