@@ -96,13 +96,11 @@ class AccountAnalyzingBotometer extends BaseBotometer implements Botometer {
     private static class AccountAnalysisResultImpl implements AccountAnalysisResult {
         
         private ClassificationResult classificationResult;
-        private List<Tweet> timeline;
-        private List<Tweet> mentions;
+        private AccountData accountData;
         
-        AccountAnalysisResultImpl(ClassificationResult classificationResult, List<Tweet> timeline, List<Tweet> mentions) {
+        private AccountAnalysisResultImpl(ClassificationResult classificationResult, List<Tweet> timeline, List<Tweet> mentions) {
             this.classificationResult = classificationResult;
-            this.timeline = timeline;
-            this.mentions = mentions;
+            this.accountData = new AccountDataImpl(classificationResult.getUser(), timeline, mentions);
         }
         
         @Override
@@ -126,13 +124,44 @@ class AccountAnalyzingBotometer extends BaseBotometer implements Botometer {
         }
         
         @Override
-        public List<? extends Tweet> getTimeline() {
-            return timeline;
+        public AccountData getAccountData() {
+            return accountData;
         }
         
         @Override
-        public List<? extends Tweet> getMentions() {
-            return mentions;
+        public String toString() {
+            return "AccountAnalysisResult(" + "user=" + getUser().getScreenName() + ", universalScore="
+                + getScores().getUniversal() + ", englishScore=" + getScores().getEnglish() + ", universalCAP="
+                + getCompleteAutomationProbability().getUniversal() + ", englishCAP="
+                + getCompleteAutomationProbability().getEnglish() + ")";
+        }
+        
+        private static class AccountDataImpl implements AccountData {
+            
+            private User user;
+            private List<Tweet> timeline;
+            private List<Tweet> mentions;
+            
+            private AccountDataImpl(User user, List<Tweet> timeline, List<Tweet> mentions) {
+                this.user = user;
+                this.timeline = timeline;
+                this.mentions = mentions;
+            }
+
+            @Override
+            public User getUser() {
+                return user;
+            }
+
+            @Override
+            public List<? extends Tweet> getTimeline() {
+                return timeline;
+            }
+
+            @Override
+            public List<? extends Tweet> getMentions() {
+                return mentions;
+            }
         }
     }
 }
