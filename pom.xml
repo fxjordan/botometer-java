@@ -37,6 +37,7 @@
 	<modules>
 		<module>botometer-api</module>
 		<module>botometer-client</module>
+		<module>twitter4j-twitter-client</module>
 	</modules>
 
 	<build>
