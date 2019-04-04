@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>de.fjobilabs.botometer</groupId>
 		<artifactId>botometer-java-parent</artifactId>
-		<version>0.1.0-SNAPSHOT</version>
+		<version>${botometer-java-project-version}</version>
 	</parent>
 	
 	<artifactId>botometer-api</artifactId>

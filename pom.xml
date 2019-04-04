@@ -5,13 +5,18 @@
 
 	<groupId>de.fjobilabs.botometer</groupId>
 	<artifactId>botometer-java-parent</artifactId>
-	<version>0.1.0-SNAPSHOT</version>
+	<version>${botometer-java-project-version}</version>
 	<packaging>pom</packaging>
 
 	<name>Botometer Java</name>
 	<description>Java library to detect Twitter bot accounts using the Botometer API.</description>
 	<url>https://github.com/fxjordan/botometer-java</url>
 	<inceptionYear>2019</inceptionYear>
+	
+	<properties>
+		<botometer-java-project-version>0.1.0-SNAPSHOT</botometer-java-project-version>
+		<java.version>1.8</java.version>
+	</properties>
 
 	<licenses>
 		<license>
@@ -41,10 +46,6 @@
 		<developerConnection>scm:git:ssh://github.com:fxjordan/botometer-java.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
-
-	<properties>
-		<java.version>1.8</java.version>
-	</properties>
 
 	<modules>
 		<module>botometer-api</module>
