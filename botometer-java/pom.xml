@@ -17,9 +17,9 @@
 	
 	<properties>
 		<!-- Botometer Java dependecy versions -->
-		<botometer-api.version>${botometer-java-main-version}</botometer-api.version>
-		<botometer-client.version>${botometer-java-main-version}</botometer-client.version>
-		<twitter4j-twitter-client.version>${botometer-java-main-version}</twitter4j-twitter-client.version>
+		<botometer-api.version>0.1.0-SNAPSHOT</botometer-api.version>
+		<botometer-client.version>0.1.0-SNAPSHOT</botometer-client.version>
+		<twitter4j-twitter-client.version>0.1.0-SNAPSHOT</twitter4j-twitter-client.version>
 	</properties>
 	
 	<dependencies>

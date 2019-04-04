@@ -18,7 +18,7 @@
 
 	<properties>
 		<!-- Botometer Java dependecy versions -->
-		<botometer-api.version>${botometer-java-main-version}</botometer-api.version>
+		<botometer-api.version>0.1.0-SNAPSHOT</botometer-api.version>
 		<!-- Third party dependecy versions -->
 		<jackson.version>2.9.8</jackson.version>
 		<okhttp.version>3.14.0</okhttp.version>
