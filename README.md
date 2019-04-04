@@ -1,6 +1,6 @@
 # Botometer Java [![Build Status](https://build.fjobilabs.de/job/botometer-java/job/master/badge/icon)](https://build.fjobilabs.de/blue/organizations/jenkins/botometer-java)
 
-Java library to detect Twitter bot accounts using the Botometer API. Botometer is a bot detection service for Twitter accounts developed by OSoMe. For more Information see [the website][botometer-website].
+Java library to detect Twitter bot accounts using [Botometer by OSoMe](https://botometer.iuni.iu.edu). It uses the Botometer API available at [RapidAPI](https://rapidapi.com/OSoMe/api/botometer).
 
 ## Usage
 
@@ -65,6 +65,3 @@ More details will follow soon.
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-
-
-[botometer-website]: https://botometer.iuni.iu.edu
