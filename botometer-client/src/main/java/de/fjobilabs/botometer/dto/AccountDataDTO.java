@@ -21,6 +21,8 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import de.fjobilabs.botometer.AccountData;
 import de.fjobilabs.twitter.Tweet;
 import de.fjobilabs.twitter.User;
@@ -31,6 +33,7 @@ import de.fjobilabs.twitter.dto.UserDTO;
  * @since 0.1.0
  * @author Felix Jordan
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class AccountDataDTO implements AccountData {
     
     private UserDTO user;

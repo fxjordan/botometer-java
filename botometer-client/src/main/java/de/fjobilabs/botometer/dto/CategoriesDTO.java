@@ -15,12 +15,15 @@
  */
 package de.fjobilabs.botometer.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import de.fjobilabs.botometer.Categories;
 
 /**
  * @since 0.1.0
  * @author Felix Jordan
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class CategoriesDTO implements Categories {
     
     private float friend;

@@ -16,6 +16,7 @@
 package de.fjobilabs.twitter.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import de.fjobilabs.twitter.Coordinates;
 
@@ -23,7 +24,7 @@ import de.fjobilabs.twitter.Coordinates;
  * @since 0.1.0
  * @author Felix Jordan
  */
-// TODO Add ignoreUnknown=true
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class CoordinatesDTO implements Coordinates {
     
     private float[] coordinates;

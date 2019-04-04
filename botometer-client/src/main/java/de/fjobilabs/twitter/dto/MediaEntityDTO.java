@@ -16,6 +16,7 @@
 package de.fjobilabs.twitter.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import de.fjobilabs.twitter.MediaEntity;
@@ -24,7 +25,7 @@ import de.fjobilabs.twitter.MediaEntity;
  * @since 0.1.0
  * @author Felix Jordan
  */
-// TODO Add ignoreUnknown=true
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class MediaEntityDTO extends AbstractEntityDTO implements MediaEntity {
     
     private String displayUrl;

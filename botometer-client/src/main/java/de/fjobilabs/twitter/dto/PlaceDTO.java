@@ -15,6 +15,8 @@
  */
 package de.fjobilabs.twitter.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import de.fjobilabs.twitter.BoundingBox;
 import de.fjobilabs.twitter.Place;
 
@@ -22,6 +24,7 @@ import de.fjobilabs.twitter.Place;
  * @since 0.1.0
  * @author Felix Jordan
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class PlaceDTO implements Place {
     
     private String id;

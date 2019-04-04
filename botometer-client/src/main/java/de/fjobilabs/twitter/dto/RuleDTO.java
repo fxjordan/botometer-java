@@ -15,13 +15,15 @@
  */
 package de.fjobilabs.twitter.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import de.fjobilabs.twitter.Rule;
 
 /**
  * @since 0.1.0
  * @author Felix Jordan
  */
-//TODO Add ignoreUnknown=true
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class RuleDTO implements Rule {
     
     private String tag;

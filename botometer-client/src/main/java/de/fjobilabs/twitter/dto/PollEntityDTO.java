@@ -19,13 +19,15 @@ import java.time.Instant;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import de.fjobilabs.twitter.PollEntity;
 
 /**
  * @since 0.1.0
  * @author Felix Jordan
  */
-//TODO Add ignoreUnknown=true
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class PollEntityDTO implements PollEntity {
     
     private List<OptionDTO> options;

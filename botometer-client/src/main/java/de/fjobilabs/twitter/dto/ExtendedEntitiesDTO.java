@@ -18,6 +18,8 @@ package de.fjobilabs.twitter.dto;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import de.fjobilabs.twitter.ExtendedEntities;
 import de.fjobilabs.twitter.MediaEntity;
 
@@ -25,6 +27,7 @@ import de.fjobilabs.twitter.MediaEntity;
  * @since 0.1.0
  * @author Felix Jordan
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ExtendedEntitiesDTO implements ExtendedEntities {
     
     private List<MediaEntityDTO> media;

@@ -30,14 +30,13 @@ import de.fjobilabs.twitter.User;
  * @since 0.1.0
  * @author Felix Jordan
  */
-// TODO Add ignoreUnknown=true
 /*
  * Attributes 'following' and 'is_translator' are deprecated.
  * 
  * TODO Check if we really can ignore 'entities' for user
  */
-@JsonIgnoreProperties(value = {"following", "is_translator", "follow_request_sent", "notifications",
-    "has_extended_profile", "entities", "is_translation_enabled", "translator_type"})
+@JsonIgnoreProperties(ignoreUnknown = true, value = {"following", "is_translator", "follow_request_sent",
+    "notifications", "has_extended_profile", "entities", "is_translation_enabled", "translator_type"})
 public class UserDTO implements User {
     
     private long id;

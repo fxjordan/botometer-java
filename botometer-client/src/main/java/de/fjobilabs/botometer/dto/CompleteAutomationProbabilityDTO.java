@@ -15,12 +15,15 @@
  */
 package de.fjobilabs.botometer.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import de.fjobilabs.botometer.CompleteAutomationProbability;
 
 /**
  * @since 0.1.0
  * @author Felix Jordan
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class CompleteAutomationProbabilityDTO implements CompleteAutomationProbability {
     
     private float english;

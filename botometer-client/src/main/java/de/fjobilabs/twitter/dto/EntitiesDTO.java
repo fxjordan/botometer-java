@@ -18,6 +18,8 @@ package de.fjobilabs.twitter.dto;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import de.fjobilabs.twitter.Entities;
 import de.fjobilabs.twitter.HashtagEntity;
 import de.fjobilabs.twitter.MediaEntity;
@@ -30,6 +32,7 @@ import de.fjobilabs.twitter.UserMentionEntity;
  * @since 0.1.0
  * @author Felix Jordan
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class EntitiesDTO implements Entities {
     
     private List<HashtagEntityDTO> hashtags;

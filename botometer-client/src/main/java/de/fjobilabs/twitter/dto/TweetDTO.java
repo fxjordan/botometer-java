@@ -42,8 +42,7 @@ import de.fjobilabs.twitter.User;
  * @since 0.1.0
  * @author Felix Jordan
  */
-// TODO Add ignoreUnknown=true
-@JsonIgnoreProperties({"geo", "contributors", "metadata"})
+@JsonIgnoreProperties(value = {"geo", "contributors", "metadata"}, ignoreUnknown = true)
 @JsonInclude(Include.NON_DEFAULT)
 public class TweetDTO implements Tweet {
     
