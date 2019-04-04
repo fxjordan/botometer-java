@@ -124,7 +124,7 @@ public class MediaEntityDTO extends AbstractEntityDTO implements MediaEntity {
      * @since 0.1.0
      * @author Felix Jordan
      */
-    // TODO Add ignoreUnknown=true
+    @JsonIgnoreProperties(ignoreUnknown = true)
     public class SizesDTO implements Sizes {
         
         private SizeDTO thumb;
@@ -163,7 +163,7 @@ public class MediaEntityDTO extends AbstractEntityDTO implements MediaEntity {
          * @since 0.1.0
          * @author Felix Jordan
          */
-        // TODO Add ignoreUnknown=true
+        @JsonIgnoreProperties(ignoreUnknown = true)
         public class SizeDTO implements Size {
             
             private int w;

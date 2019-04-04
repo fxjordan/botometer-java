@@ -60,7 +60,7 @@ public class PollEntityDTO implements PollEntity {
      * @since 0.1.0
      * @author Felix Jordan
      */
-    //TODO Add ignoreUnknown=true
+    @JsonIgnoreProperties(ignoreUnknown = true)
     public static class OptionDTO implements Option {
         
         private int position;
