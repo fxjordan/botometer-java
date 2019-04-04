@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>de.fjobilabs.botometer</groupId>
 		<artifactId>botometer-java-parent</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>0.1.0-SNAPSHOT</version>
 	</parent>
 
 	<artifactId>botometer-client</artifactId>
@@ -18,7 +18,7 @@
 
 	<properties>
 		<!-- Botometer Java dependecy versions -->
-		<botometer-api.version>0.0.1-SNAPSHOT</botometer-api.version>
+		<botometer-api.version>0.1.0-SNAPSHOT</botometer-api.version>
 		<!-- Third party dependecy versions -->
 		<jackson.version>2.9.8</jackson.version>
 		<okhttp.version>3.14.0</okhttp.version>
