@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>de.fjobilabs.botometerjava</groupId>
+		<groupId>de.fjobilabs.botometer</groupId>
 		<artifactId>botometer-java-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
@@ -22,7 +22,7 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>de.fjobilabs.botometerjava</groupId>
+			<groupId>de.fjobilabs.botometer</groupId>
 			<artifactId>botometer-api</artifactId>
 			<version>${botometer-api.version}</version>
 		</dependency>
