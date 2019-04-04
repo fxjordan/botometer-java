@@ -9,15 +9,26 @@
 	<packaging>pom</packaging>
 
 	<name>Botometer Java</name>
-	<description>Java client for the Botometer API</description>
+	<description>Java library to detect Twitter bot accounts using the Botometer API.</description>
+	<url>https://github.com/fxjordan/botometer-java</url>
 	<inceptionYear>2019</inceptionYear>
 
 	<licenses>
 		<license>
 			<name>Apache License, Version 2.0</name>
 			<url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
 		</license>
 	</licenses>
+
+	<developers>
+		<developer>
+			<name>Felix Jordan</name>
+			<email>felix.jordan@fjobilabs.de</email>
+			<organization>FJOBI Labs Softwareentwicklung - Felix Jordan</organization>
+			<organizationUrl>http://www.fjobilabs.de</organizationUrl>
+		</developer>
+	</developers>
 
 	<organization>
 		<name>FJOBI Labs Softwareentwicklung - Felix Jordan</name>
@@ -25,9 +36,9 @@
 	</organization>
 
 	<scm>
-		<url>https://git.fjobilabs.de/projects/BMJ/repos/botometer-java/</url>
-		<connection>scm:git:https://git.fjobilabs.de/projects/BMJ/repos/botometer-java.git</connection>
-		<developerConnection>scm:git:https://git.fjobilabs.de/projects/BMJ/repos/botometer-java.git</developerConnection>
+		<url>https://github.com/fxjordan/botometer-java</url>
+		<connection>scm:git:git://github.com/fxjordan/botometer-java.git</connection>
+		<developerConnection>scm:git:ssh://github.com:fxjordan/botometer-java.git</developerConnection>
 	</scm>
 
 	<properties>
@@ -80,28 +91,4 @@
 			</plugins>
 		</pluginManagement>
 	</build>
-
-	<repositories>
-		<repository>
-			<id>fjobilabs-snapshots</id>
-			<name>FJOBILabs Snapshots</name>
-			<url>https://repo.fjobilabs.de/repository/maven-snapshots/</url>
-		</repository>
-		<repository>
-			<id>fjobilabs-releases</id>
-			<name>FJOBILabs Releases</name>
-			<url>https://repo.fjobilabs.de/repository/maven-releases/</url>
-		</repository>
-	</repositories>
-
-	<distributionManagement>
-		<snapshotRepository>
-			<id>fjobilabs-snapshots</id>
-			<url>https://repo.fjobilabs.de/repository/maven-snapshots/</url>
-		</snapshotRepository>
-		<repository>
-			<id>fjobilabs-releases</id>
-			<url>https://repo.fjobilabs.de/repository/maven-releases/</url>
-		</repository>
-	</distributionManagement>
 </project>

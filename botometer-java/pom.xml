@@ -13,22 +13,30 @@
 	
 	<name>Botometer Java</name>
 	<description>Java library to detect Twitter bot accounts using the Botometer API.</description>
+	<url>https://github.com/fxjordan/botometer-java</url>
+	
+	<properties>
+		<!-- Botometer Java dependecy versions -->
+		<botometer-api.version>0.0.1-SNAPSHOT</botometer-api.version>
+		<botometer-client.version>0.0.1-SNAPSHOT</botometer-client.version>
+		<twitter4j-twitter-client.version>0.0.1-SNAPSHOT</twitter4j-twitter-client.version>
+	</properties>
 	
 	<dependencies>
 		<dependency>
 			<groupId>de.fjobilabs.botometer</groupId>
 			<artifactId>botometer-api</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>${botometer-api.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>de.fjobilabs.botometer</groupId>
 			<artifactId>botometer-client</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>${botometer-client.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>de.fjobilabs.botometer</groupId>
 			<artifactId>twitter4j-twitter-client</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>${twitter4j-twitter-client.version}</version>
 		</dependency>
 	</dependencies>
 </project>

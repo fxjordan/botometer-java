@@ -13,9 +13,12 @@
 
 	<name>Twitter4J Twitter Client</name>
 	<description>TwitterClient implementation for botometer-api backed by Twitter4J</description>
+	<url>https://github.com/fxjordan/botometer-java</url>
 
 	<properties>
+		<!-- Botometer Java dependecy versions -->
 		<botometer-api.version>0.0.1-SNAPSHOT</botometer-api.version>
+		<!-- Third party dependecy versions -->
 		<twitter4j.version>4.0.7</twitter4j.version>
 		<slf4j.version>1.7.26</slf4j.version>
 	</properties>

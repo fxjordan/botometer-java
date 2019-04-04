@@ -14,8 +14,12 @@
 
 	<name>Botometer Client</name>
 	<description>Java client for the Botometer API</description>
+	<url>https://github.com/fxjordan/botometer-java</url>
 
 	<properties>
+		<!-- Botometer Java dependecy versions -->
+		<botometer-api.version>0.0.1-SNAPSHOT</botometer-api.version>
+		<!-- Third party dependecy versions -->
 		<jackson.version>2.9.8</jackson.version>
 		<okhttp.version>3.14.0</okhttp.version>
 		<slf4j.version>1.7.26</slf4j.version>
@@ -25,7 +29,7 @@
 		<dependency>
 			<groupId>de.fjobilabs.botometer</groupId>
 			<artifactId>botometer-api</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>${botometer-api.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
