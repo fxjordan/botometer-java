@@ -2,10 +2,20 @@
 
 A Java client library form the Botometer API. For more Information see [the website][botometer-website].
 
+## Usage
 
-## To be continued...
+```java
+BotometerConfiguration config = new BotometerConfiguration()
+    .botometerApiKey("Botometer-API-Key") // X-RapidAPI-Key
+    .twitterConsumerKey("consumer-key")
+    .twitterConsumerSecret("consumer-secret")
+    .twitterAccessToken("access-token")
+    .twitterAccessTokenSecret("access-token-secret").build();
 
-More details will follow soon.
+Botometer botometer = new BotometerFactory(config).create();
+
+AccountAnalysisResult result = botometer.analyzeAccount("TruthyBotOrNot");
+```
 
 ## Setup
 
@@ -31,10 +41,14 @@ More details will follow soon.
 ```xml
 <dependency>
     <groupId>de.fjobilabs.botometer</groupId>
-    <artifactId>botometer-client</artifactId>
+    <artifactId>botometer-java</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 </dependency>
 ```
+
+## To be continued...
+
+More details will follow soon.
 
 ## License
 
