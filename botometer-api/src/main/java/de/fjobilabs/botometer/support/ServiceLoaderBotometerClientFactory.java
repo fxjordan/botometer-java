@@ -24,12 +24,12 @@ import de.fjobilabs.botometer.api.BotometerClientFactory;
  * @since 0.1.0
  * @author Felix Jordan
  */
-public class ServiceLoaderBotometerFactory implements BotometerClientFactory {
+public class ServiceLoaderBotometerClientFactory implements BotometerClientFactory {
     
     private ServiceLoader<BotometerClientFactory> serviceLoader;
     private BotometerClientFactory targetFactory;
     
-    public ServiceLoaderBotometerFactory() {
+    public ServiceLoaderBotometerClientFactory() {
         this.serviceLoader = ServiceLoader.load(BotometerClientFactory.class);
     }
     
