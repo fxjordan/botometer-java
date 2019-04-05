@@ -19,30 +19,13 @@ AccountAnalysisResult result = botometer.analyzeAccount("TruthyBotOrNot");
 
 ## Setup
 
-1. Add FJOBI Labs repository to your `pom.xml`:
-
-```xml
-<repositories>
-    <repository>
-        <id>fjobilabs-snapshots</id>
-        <name>FJOBILabs Snapshots</name>
-        <url>https://repo.fjobilabs.de/repository/maven-snapshots/</url>
-    </repository>
-    <repository>
-        <id>fjobilabs-releases</id>
-        <name>FJOBILabs Releases</name>
-        <url>https://repo.fjobilabs.de/repository/maven-releases/</url>
-    </repository>
-</repositories>
-```
-
-2. Add dependecy:
+Add dependecy:
 
 ```xml
 <dependency>
     <groupId>de.fjobilabs.botometer</groupId>
     <artifactId>botometer-java</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.1.0</version>
 </dependency>
 ```
 
