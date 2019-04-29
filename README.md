@@ -5,7 +5,7 @@ Java library to detect Twitter bot accounts using [Botometer by OSoMe](https://b
 ## Usage
 
 ```java
-BotometerConfiguration config = new BotometerConfiguration()
+BotometerConfiguration config = new BotometerConfigurationBuilder()
     .botometerApiKey("Botometer-API-Key") // X-RapidAPI-Key
     .twitterConsumerKey("consumer-key")
     .twitterConsumerSecret("consumer-secret")
