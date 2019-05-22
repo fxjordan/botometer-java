@@ -64,6 +64,9 @@ class Twitter4JMediaEntity extends AbstractTwitter4JEntity implements MediaEntit
     
     @Override
     public Sizes getSizes() {
+        if (this.mediaEntity == null) {
+            return null;
+        }
         return new Twitter4JSizes(this.mediaEntity.getSizes());
     }
     

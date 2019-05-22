@@ -45,6 +45,9 @@ class Twitter4JTweet implements Tweet {
     private Status status;
     
     Twitter4JTweet(Status status) {
+        if (status == null) {
+            throw new IllegalArgumentException("status must not be null");
+        }
         this.status = status;
     }
     
@@ -198,6 +201,9 @@ class Twitter4JTweet implements Tweet {
     
     @Override
     public Locale getLang() {
+        if (this.status.getLang() == null) {
+            return null;
+        }
         return new Locale(this.status.getLang());
     }
     

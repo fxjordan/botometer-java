@@ -19,7 +19,6 @@ import de.fjobilabs.twitter.Entity;
 
 import twitter4j.TweetEntity;
 
-
 /**
  * @since 0.1.0
  * @author Felix Jordan
@@ -29,9 +28,12 @@ abstract class AbstractTwitter4JEntity implements Entity {
     private TweetEntity tweetEntity;
     
     AbstractTwitter4JEntity(TweetEntity tweetEntity) {
+        if (tweetEntity == null) {
+            throw new IllegalArgumentException("tweetEntity must not be null");
+        }
         this.tweetEntity = tweetEntity;
     }
-
+    
     @Override
     public int getStartIndex() {
         return this.tweetEntity.getStart();

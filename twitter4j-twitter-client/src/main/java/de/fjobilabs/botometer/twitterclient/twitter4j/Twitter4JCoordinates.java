@@ -22,7 +22,6 @@ import de.fjobilabs.twitter.Coordinates;
 
 import twitter4j.GeoLocation;
 
-
 /**
  * @since 0.1.0
  * @author Felix Jordan
@@ -34,6 +33,9 @@ class Twitter4JCoordinates implements Coordinates {
     private GeoLocation geoLocation;
     
     Twitter4JCoordinates(GeoLocation geoLocation) {
+        if (geoLocation == null) {
+            throw new IllegalArgumentException("geoLocation must not be null");
+        }
         this.geoLocation = geoLocation;
     }
     

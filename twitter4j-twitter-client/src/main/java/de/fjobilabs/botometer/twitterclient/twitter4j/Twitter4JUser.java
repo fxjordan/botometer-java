@@ -117,7 +117,7 @@ class Twitter4JUser implements User {
     
     @Override
     public OffsetDateTime getCreatedAt() {
-        if (this.getCreatedAt() == null) {
+        if (this.user.getCreatedAt() == null) {
             return null;
         }
         return OffsetDateTime.from(this.user.getCreatedAt().toInstant().atOffset(ZoneOffset.UTC));
@@ -140,7 +140,7 @@ class Twitter4JUser implements User {
     
     @Override
     public Locale getLang() {
-        if (this.user.getLang() != null) {
+        if (this.user.getLang() == null) {
             return null;
         }
         return new Locale(this.user.getLang());

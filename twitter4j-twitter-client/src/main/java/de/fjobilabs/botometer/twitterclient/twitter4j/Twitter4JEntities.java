@@ -43,6 +43,9 @@ class Twitter4JEntities implements Entities {
     private EntitySupport entitySupport;
     
     Twitter4JEntities(EntitySupport entitySupport) {
+        if (entitySupport == null) {
+            throw new IllegalArgumentException("entitySupport must not be null");
+        }
         this.entitySupport = entitySupport;
     }
     

@@ -33,6 +33,9 @@ class Twitter4JPlace implements Place {
     private twitter4j.Place place;
     
     Twitter4JPlace(twitter4j.Place place) {
+        if (place == null) {
+            throw new IllegalArgumentException("place must not be null");
+        }
         this.place = place;
     }
     
@@ -73,6 +76,9 @@ class Twitter4JPlace implements Place {
     
     @Override
     public BoundingBox getBoundingBox() {
+        if (this.place.getBoundingBoxCoordinates() == null || this.place.getBoundingBoxType() == null) {
+            return null;
+        }
         return new Twitter4JBoundingBox(this.place.getBoundingBoxCoordinates(), this.place.getBoundingBoxType());
     }
     

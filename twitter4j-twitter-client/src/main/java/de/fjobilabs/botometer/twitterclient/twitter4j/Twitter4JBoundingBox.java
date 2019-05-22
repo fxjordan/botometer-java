@@ -29,6 +29,13 @@ class Twitter4JBoundingBox implements BoundingBox {
     private String type;
     
     Twitter4JBoundingBox(GeoLocation[][] coordinates, String type) {
+        if (coordinates == null) {
+            throw new IllegalArgumentException("coordinates must not be null");
+        }
+        if (type == null) {
+            throw new IllegalArgumentException("type must not be null");
+        }
+        
         this.coordinates = new float[coordinates.length][][];
         for (int i = 0; i < coordinates.length; i++) {
             GeoLocation locations[] = coordinates[i];
