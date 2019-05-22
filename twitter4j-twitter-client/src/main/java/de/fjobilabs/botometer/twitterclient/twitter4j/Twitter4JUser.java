@@ -38,6 +38,9 @@ class Twitter4JUser implements User {
     private twitter4j.User user;
     
     Twitter4JUser(twitter4j.User user) {
+        if (user == null) {
+            throw new IllegalArgumentException("user must not be null");
+        }
         this.user = user;
     }
     
@@ -114,6 +117,9 @@ class Twitter4JUser implements User {
     
     @Override
     public OffsetDateTime getCreatedAt() {
+        if (this.getCreatedAt() == null) {
+            return null;
+        }
         return OffsetDateTime.from(this.user.getCreatedAt().toInstant().atOffset(ZoneOffset.UTC));
     }
     
@@ -134,6 +140,9 @@ class Twitter4JUser implements User {
     
     @Override
     public Locale getLang() {
+        if (this.user.getLang() != null) {
+            return null;
+        }
         return new Locale(this.user.getLang());
     }
     
@@ -214,10 +223,10 @@ class Twitter4JUser implements User {
     
     @Override
     public List<String> getWithheldInCountries() {
-        if (this.user.getWithheldInCountries() != null) {
-            return Arrays.asList(this.user.getWithheldInCountries());
+        if (this.user.getWithheldInCountries() == null) {
+            return null;
         }
-        return null;
+        return Arrays.asList(this.user.getWithheldInCountries());
     }
     
     @Override
