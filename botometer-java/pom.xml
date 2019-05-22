@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>de.fjobilabs.botometer</groupId>
 		<artifactId>botometer-java-parent</artifactId>
-		<version>0.1.1</version>
+		<version>0.1.2-SNAPSHOT</version>
 	</parent>
 	
 	<artifactId>botometer-java</artifactId>
@@ -15,9 +15,9 @@
 	
 	<properties>
 		<!-- Botometer Java dependecy versions -->
-		<botometer-api.version>0.1.1</botometer-api.version>
-		<botometer-client.version>0.1.1</botometer-client.version>
-		<twitter4j-twitter-client.version>0.1.1</twitter4j-twitter-client.version>
+		<botometer-api.version>0.1.2-SNAPSHOT</botometer-api.version>
+		<botometer-client.version>0.1.2-SNAPSHOT</botometer-client.version>
+		<twitter4j-twitter-client.version>0.1.2-SNAPSHOT</twitter4j-twitter-client.version>
 	</properties>
 	
 	<dependencies>
