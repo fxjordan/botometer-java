@@ -125,7 +125,7 @@ class Twitter4JTweet implements Tweet {
     
     @Override
     public boolean isQuoteStatus() {
-        logger.warn("Tweet.isQuoteStatus() called, but not impemented by Twitter4JTweet");
+        logger.trace("Tweet.isQuoteStatus() called, but not impemented by Twitter4JTweet");
         return false;
     }
     
@@ -147,13 +147,13 @@ class Twitter4JTweet implements Tweet {
     
     @Override
     public int getQuoteCount() {
-        logger.warn("Tweet.getQuoteCount() called, but not impemented by Twitter4JTweet");
+        logger.trace("Tweet.getQuoteCount() called, but not impemented by Twitter4JTweet");
         return 0;
     }
     
     @Override
     public int getReplyCount() {
-        logger.warn("Tweet.getReplyCount() called, but not impemented by Twitter4JTweet");
+        logger.trace("Tweet.getReplyCount() called, but not impemented by Twitter4JTweet");
         return 0;
     }
     
@@ -174,7 +174,7 @@ class Twitter4JTweet implements Tweet {
     
     @Override
     public ExtendedEntities getExtendedEntities() {
-        logger.warn("Tweet.getExtendedEntities() called, but not impemented by Twitter4JTweet");
+        logger.trace("Tweet.getExtendedEntities() called, but not impemented by Twitter4JTweet");
         return null;
     }
     
@@ -195,7 +195,7 @@ class Twitter4JTweet implements Tweet {
     
     @Override
     public String getFilterLevel() {
-        logger.warn("Tweet.getFilterLevel() called, but not impemented by Twitter4JTweet");
+        logger.trace("Tweet.getFilterLevel() called, but not impemented by Twitter4JTweet");
         return null;
     }
     
@@ -209,7 +209,7 @@ class Twitter4JTweet implements Tweet {
     
     @Override
     public List<? extends Rule> getMatchingRules() {
-        logger.warn("Tweet.getMatchingRules() called, but not impemented by Twitter4JTweet");
+        logger.trace("Tweet.getMatchingRules() called, but not impemented by Twitter4JTweet");
         return null;
     }
     
@@ -226,25 +226,25 @@ class Twitter4JTweet implements Tweet {
     
     @Override
     public Map<String, Object> getScopes() {
-        logger.warn("Tweet.getScopes() called, but not impemented by Twitter4JTweet");
+        logger.trace("Tweet.getScopes() called, but not impemented by Twitter4JTweet");
         return null;
     }
     
     @Override
     public boolean isWithheldCopyright() {
-        logger.warn("Tweet.isWithheldCopyright() called, but not impemented by Twitter4JTweet");
+        logger.trace("Tweet.isWithheldCopyright() called, but not impemented by Twitter4JTweet");
         return false;
     }
     
     @Override
     public List<String> getWithheldCountries() {
-        logger.warn("Tweet.getWithheldCountries() called, but not impemented by Twitter4JTweet");
+        logger.trace("Tweet.getWithheldCountries() called, but not impemented by Twitter4JTweet");
         return null;
     }
     
     @Override
     public String getWithheldScope() {
-        logger.warn("Tweet.getWithheldScope() called, but not impemented by Twitter4JTweet");
+        logger.trace("Tweet.getWithheldScope() called, but not impemented by Twitter4JTweet");
         return null;
     }
 }

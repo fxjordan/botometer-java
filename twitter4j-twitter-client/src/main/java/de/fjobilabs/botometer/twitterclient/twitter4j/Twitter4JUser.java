@@ -76,7 +76,7 @@ class Twitter4JUser implements User {
     
     @Override
     public List<Object> getDerived() {
-        logger.warn("User.getDerived() called, but not impemented by Twitter4JUser");
+        logger.trace("User.getDerived() called, but not impemented by Twitter4JUser");
         return Collections.emptyList();
     }
     
@@ -231,7 +231,7 @@ class Twitter4JUser implements User {
     
     @Override
     public String getWithheldScope() {
-        logger.warn("User.getWithheldScope() called, but not impemented by Twitter4JUser");
+        logger.trace("User.getWithheldScope() called, but not impemented by Twitter4JUser");
         return null;
     }
 }

@@ -72,7 +72,7 @@ class Twitter4JMediaEntity extends AbstractTwitter4JEntity implements MediaEntit
     
     @Override
     public long getSourceStatusId() {
-        logger.warn("MediaEntity.getReplyCount() called, but not impemented by Twitter4JMediaEntity");
+        logger.trace("MediaEntity.getReplyCount() called, but not impemented by Twitter4JMediaEntity");
         return 0;
     }
     

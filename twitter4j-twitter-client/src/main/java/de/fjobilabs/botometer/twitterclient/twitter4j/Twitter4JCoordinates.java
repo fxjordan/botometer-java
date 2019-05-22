@@ -51,7 +51,7 @@ class Twitter4JCoordinates implements Coordinates {
     
     @Override
     public String getType() {
-        logger.warn("Coordinates.getType() called, but not impemented by Twitter4JCoordinates");
+        logger.trace("Coordinates.getType() called, but not impemented by Twitter4JCoordinates");
         // We use the default from Twitter API documentation here
         return "Point";
     }

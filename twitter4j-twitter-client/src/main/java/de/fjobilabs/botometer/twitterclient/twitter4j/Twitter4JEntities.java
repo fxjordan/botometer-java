@@ -96,7 +96,7 @@ class Twitter4JEntities implements Entities {
     
     @Override
     public List<? extends PollEntity> getPolls() {
-        logger.warn("Entities.getPolls() called, but not impemented by Twitter4JEntities");
+        logger.trace("Entities.getPolls() called, but not impemented by Twitter4JEntities");
         return null;
     }
 }

@@ -84,7 +84,7 @@ class Twitter4JPlace implements Place {
     
     @Override
     public Object getAttributes() {
-        logger.warn("Place.getAttributes() called, but not impemented by Twitter4JPlace");
+        logger.trace("Place.getAttributes() called, but not impemented by Twitter4JPlace");
         return null;
     }
 }
