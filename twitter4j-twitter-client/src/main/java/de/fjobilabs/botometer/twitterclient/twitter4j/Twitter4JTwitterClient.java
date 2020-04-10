@@ -63,7 +63,7 @@ public class Twitter4JTwitterClient implements TwitterClient {
         Paging paging = new Paging();
         paging.setCount(count);
         try {
-            return this.twitter.getUserTimeline(userId).stream().map(Twitter4JTweet::new).collect(Collectors.toList());
+            return this.twitter.getUserTimeline(userId, paging).stream().map(Twitter4JTweet::new).collect(Collectors.toList());
         } catch (TwitterException e) {
             throw new TwitterClientException("Failed to get user timeline for userId: " + userId, e);
         }
@@ -74,7 +74,7 @@ public class Twitter4JTwitterClient implements TwitterClient {
         Paging paging = new Paging();
         paging.setCount(count);
         try {
-            return this.twitter.getUserTimeline(screenName).stream().map(Twitter4JTweet::new)
+            return this.twitter.getUserTimeline(screenName, paging).stream().map(Twitter4JTweet::new)
                 .collect(Collectors.toList());
         } catch (TwitterException e) {
             throw new TwitterClientException("Failed to get user timeline for screenName: " + screenName, e);
