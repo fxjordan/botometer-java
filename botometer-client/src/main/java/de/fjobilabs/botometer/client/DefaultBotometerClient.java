@@ -43,7 +43,7 @@ import okhttp3.ResponseBody;
  */
 public class DefaultBotometerClient extends AbstractBotometerClient {
     
-    private static final String BOTOMETER_CHECK_ACCOUNT_URL = "https://osome-botometer.p.rapidapi.com/2/check_account";
+    private static final String BOTOMETER_CHECK_ACCOUNT_URL = "https://botometer-pro.p.rapidapi.com/2/check_account";
     private static final MediaType JSON_MEDIA_TYPE = MediaType.get("application/json; charset=utf-8");
     
     private static final Logger logger = LoggerFactory.getLogger(DefaultBotometerClient.class);
