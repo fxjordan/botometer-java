@@ -26,6 +26,7 @@ public class BotometerConfigurationBuilder {
     
     private BotometerClientFactory botometerClientFactory;
     private TwitterClientFactory twitterClientFactory;
+    private String botometerCheckAccountsEndpoint;
     private String botometerApiKey;
     private String twitterConsumerKey;
     private String twitterConsumerSecret;
@@ -38,6 +39,7 @@ public class BotometerConfigurationBuilder {
     public BotometerConfigurationBuilder(BotometerConfiguration configuration) {
         this.botometerClientFactory = configuration.getBotometerClientFactory();
         this.twitterClientFactory = configuration.getTwitterClientFactory();
+        this.botometerCheckAccountsEndpoint = configuration.getBotometerCheckAccountsEndpoint();
         this.botometerApiKey = configuration.getBotometerApiKey();
         this.twitterConsumerKey = configuration.getTwitterConsumerKey();
         this.twitterConsumerSecret = configuration.getTwitterConsumerSecret();
@@ -52,6 +54,11 @@ public class BotometerConfigurationBuilder {
     
     public BotometerConfigurationBuilder twitterClientFactory(TwitterClientFactory twitterClientFactory) {
         this.twitterClientFactory = twitterClientFactory;
+        return this;
+    }
+    
+    public BotometerConfigurationBuilder botometerCheckAccountsEndpoint(String checkAccountsEndpoint) {
+        this.botometerCheckAccountsEndpoint = checkAccountsEndpoint;
         return this;
     }
     
@@ -81,9 +88,20 @@ public class BotometerConfigurationBuilder {
     }
     
     public BotometerConfiguration build() {
-        BotometerConfiguration configuration = new BotometerConfiguration(this.botometerClientFactory,
-            this.twitterClientFactory, this.botometerApiKey, this.twitterConsumerKey, this.twitterConsumerSecret,
-            this.twitterAccessToken, this.twitterAccessTokenSecret);
+    	String botometerCheckAccountsEndpoint = this.botometerCheckAccountsEndpoint;
+    	if (botometerCheckAccountsEndpoint == null) {
+    		botometerCheckAccountsEndpoint = BotometerConfiguration.DEFAULT_CHECK_ACCOUNT_ENDPOINT_URL;
+    	}
+    	
+        BotometerConfiguration configuration = new BotometerConfiguration(
+        		this.botometerClientFactory,
+        		this.twitterClientFactory,
+        		botometerCheckAccountsEndpoint,
+        		this.botometerApiKey,
+        		this.twitterConsumerKey,
+        		this.twitterConsumerSecret,
+        		this.twitterAccessToken,
+        		this.twitterAccessTokenSecret);
         
         configuration.validate();
         return configuration;

@@ -43,15 +43,17 @@ import okhttp3.ResponseBody;
  */
 public class DefaultBotometerClient extends AbstractBotometerClient {
     
-    private static final String BOTOMETER_CHECK_ACCOUNT_URL = "https://botometer-pro.p.rapidapi.com/2/check_account";
     private static final MediaType JSON_MEDIA_TYPE = MediaType.get("application/json; charset=utf-8");
     
     private static final Logger logger = LoggerFactory.getLogger(DefaultBotometerClient.class);
     
+    private String checkAccountsEndpoint;
     private String apiKey;
     private OkHttpClient httpClient;
     
-    public DefaultBotometerClient(String apiKey) {
+    public DefaultBotometerClient(String checkAccountsEndpoint, String apiKey) {
+    	Objects.requireNonNull(checkAccountsEndpoint, "checkAccountsEndpoint must not be null");
+    	this.checkAccountsEndpoint = checkAccountsEndpoint;
         Objects.requireNonNull(apiKey, "apikey must not be null");
         this.apiKey = apiKey;
         this.httpClient = new OkHttpClient();
@@ -60,8 +62,11 @@ public class DefaultBotometerClient extends AbstractBotometerClient {
     @Override
     public ClassificationResult checkAccount(byte[] accountDataJson) throws BotometerException, IOException {
         RequestBody body = RequestBody.create(JSON_MEDIA_TYPE, accountDataJson);
-        Request request = new Request.Builder().url(BOTOMETER_CHECK_ACCOUNT_URL).header("X-RapidAPI-Key", this.apiKey)
-            .post(body).build();
+        Request request = new Request.Builder()
+        		.url(this.checkAccountsEndpoint)
+        		.header("X-RapidAPI-Key", this.apiKey)
+        		.post(body)
+        		.build();
         
         try (Response response = this.httpClient.newCall(request).execute()) {
             if (response.isSuccessful()) {

@@ -24,17 +24,27 @@ import de.fjobilabs.botometer.twitterclient.TwitterClientFactory;
  */
 public class BotometerConfiguration {
     
+	public static final String DEFAULT_CHECK_ACCOUNT_ENDPOINT_URL = "https://botometer-pro.p.rapidapi.com/2/check_account";
+	
     private BotometerClientFactory botometerClientFactory;
     private TwitterClientFactory twitterClientFactory;
+    private String botometerCheckAccountsEndpoint;
     private String botometerApiKey;
     private String twitterConsumerKey;
     private String twitterConsumerSecret;
     private String twitterAccessToken;
     private String twitterAccessTokenSecret;
     
-    BotometerConfiguration(BotometerClientFactory botometerClientFactory, TwitterClientFactory twitterClientFactory,
-        String botometerApiKey, String twitterConsumerKey, String twitterConsumerSecret, String twitterAccessToken,
-        String twitterAccessTokenSecret) {
+    BotometerConfiguration(
+    		BotometerClientFactory botometerClientFactory,
+    		TwitterClientFactory twitterClientFactory,
+    		String botometerCheckAccountsEndpoint,
+    		String botometerApiKey,
+    		String twitterConsumerKey,
+    		String twitterConsumerSecret,
+    		String twitterAccessToken,
+    		String twitterAccessTokenSecret) {
+    	this.botometerCheckAccountsEndpoint = botometerCheckAccountsEndpoint;
         this.botometerClientFactory = botometerClientFactory;
         this.twitterClientFactory = twitterClientFactory;
         this.botometerApiKey = botometerApiKey;
@@ -47,6 +57,7 @@ public class BotometerConfiguration {
     BotometerConfiguration(BotometerConfiguration configuration) {
         this.botometerClientFactory = configuration.getBotometerClientFactory();
         this.twitterClientFactory = configuration.getTwitterClientFactory();
+        this.botometerCheckAccountsEndpoint = configuration.getBotometerCheckAccountsEndpoint();
         this.botometerApiKey = configuration.getBotometerApiKey();
         this.twitterConsumerKey = configuration.getTwitterConsumerKey();
         this.twitterConsumerSecret = configuration.getTwitterConsumerSecret();
@@ -102,6 +113,18 @@ public class BotometerConfiguration {
     public boolean hasTwitterClientFactory() {
         return this.twitterClientFactory != null;
     }
+    
+	public String getBotometerCheckAccountsEndpoint() {
+		return botometerCheckAccountsEndpoint;
+	}
+	
+	public void setBotometerCheckAccountsEndpoint(String botometerCheckAccountsEndpoint) {
+		this.botometerCheckAccountsEndpoint = botometerCheckAccountsEndpoint;
+	}
+	
+	public boolean hasBotometerCheckAccountsEndpoint() {
+		return botometerCheckAccountsEndpoint != null;
+	}
     
     public String getBotometerApiKey() {
         return botometerApiKey;

@@ -25,7 +25,7 @@ import de.fjobilabs.botometer.api.BotometerClientFactory;
 public class DefaultBotometerClientFactory implements BotometerClientFactory {
     
     @Override
-    public BotometerClient createBotometerClient(String apiKey) {
-        return new DefaultBotometerClient(apiKey);
+    public BotometerClient createBotometerClient(String checkAccountsEndpoint, String apiKey) {
+        return new DefaultBotometerClient(checkAccountsEndpoint, apiKey);
     }
 }

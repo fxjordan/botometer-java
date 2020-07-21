@@ -21,5 +21,5 @@ package de.fjobilabs.botometer.api;
  */
 public interface BotometerClientFactory {
     
-    BotometerClient createBotometerClient(String apiKey);
+    BotometerClient createBotometerClient(String checkAccountsEndpoint, String apiKey);
 }

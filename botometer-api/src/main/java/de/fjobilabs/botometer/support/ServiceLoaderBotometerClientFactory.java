@@ -34,11 +34,11 @@ public class ServiceLoaderBotometerClientFactory implements BotometerClientFacto
     }
     
     @Override
-    public BotometerClient createBotometerClient(String apiKey) {
+    public BotometerClient createBotometerClient(String checkAccountsEndpoint, String apiKey) {
         if (this.targetFactory == null) {
             this.targetFactory = loadFactory();
         }
-        return this.targetFactory.createBotometerClient(apiKey);
+        return this.targetFactory.createBotometerClient(checkAccountsEndpoint, apiKey);
     }
     
     private BotometerClientFactory loadFactory() {

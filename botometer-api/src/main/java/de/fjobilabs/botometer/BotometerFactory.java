@@ -82,7 +82,9 @@ public class BotometerFactory {
         if (botometerClientFactory == null) {
             botometerClientFactory = getDefaultBotometerFactory();
         }
-        return botometerClientFactory.createBotometerClient(configuration.getBotometerApiKey());
+        return botometerClientFactory.createBotometerClient(
+        		configuration.getBotometerCheckAccountsEndpoint(),
+        		configuration.getBotometerApiKey());
     }
     
     protected TwitterClient createTwitterClient(BotometerConfiguration configuration) {
