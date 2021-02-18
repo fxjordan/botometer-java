@@ -18,7 +18,7 @@
 		<!-- Botometer Java dependecy versions -->
 		<botometer-api.version>0.1.2-SNAPSHOT</botometer-api.version>
 		<!-- Third party dependecy versions -->
-		<jackson.version>2.10.3</jackson.version>
+		<jackson.version>2.12.1</jackson.version>
 		<okhttp.version>3.14.0</okhttp.version>
 		<slf4j.version>1.7.26</slf4j.version>
 	</properties>
