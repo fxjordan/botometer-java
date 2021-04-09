@@ -39,11 +39,11 @@ public interface Entity {
      * The entities text representation that is embedded into the Tweet. This
      * can be:
      * <ul>
-     * <li>Name of the hashtag, minus the leading �#� character</li>
+     * <li>Name of the hashtag, minus the leading '#' character</li>
      * <li>URL in a Tweet</li>
      * <li>Media URL in a Tweet</li>
      * <li>screen_name of a mentioned user (@mention)</li>
-     * <li>Name of the cashhtag, minus the leading �$� character</li>
+     * <li>Name of the cashhtag, minus the leading '#' character</li>
      * </ul>
      * 
      * @return The entity text.
